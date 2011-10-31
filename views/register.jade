@@ -1,0 +1,21 @@
+.topbar
+  .topbar-inner
+    .container
+      a.brand(href='#')= title
+      ul#nav
+        li: a(href='/') Home
+        li: a(href='/config') 1. Configure
+        li.active: a(href='/register') 2. Register
+        li: a(href='/deploy') 3. Deploy
+
+.container
+  h1 Register
+.container
+  .offset3.well
+    ul
+      li
+        h2 vmc target api.wilbur.io
+      li
+        h2 vmc register
+    .pull-right
+      a.btn.primary(href='/deploy') Next

@@ -1,0 +1,28 @@
+:coffeescript
+  $ -> prettyPrint()
+
+include shared/topbar
+.container
+  .row
+    .four.columns
+      include shared/index
+
+    .eight.columns
+      .panel
+        h2 Getting Started
+      .four.colums
+        include started/requirements
+        include started/install
+        include started/target
+        include started/register
+
+      :markdown
+        ### Thank You
+      
+        Thank you for giving Wilbur.IO a try.  It is
+        real easy to get started.  Just follow these steps:
+
+      :markdown
+        ### Congrats you are now signed up with wilbur.io
+      
+        Let's Deploy an App! [continue](/deploy)

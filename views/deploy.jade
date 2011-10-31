@@ -1,0 +1,63 @@
+:coffeescript
+  $ -> prettyPrint()
+include shared/topbar
+.container
+  .row
+    .four.columns
+      include shared/index
+    .eight.columns
+      .panel
+        h2 Deploy an App
+        .subheader.
+          It is so simple to deploy an application, you will
+          not believe it.
+
+      :markdown
+        First lets create a simple sinatra application.
+
+      pre.prettyprint.lang-sh
+        |  mkdir helloword-app
+        |  mate app.rb
+
+      pre.prettyprint.lang-rb
+        |  # app.rb
+        |  require 'sinatra'
+        |  
+        |  get '/' do
+        |    "Hello World"
+        |  end
+
+      pre.prettyprint.lang-sh
+        |  ruby app.rb
+
+      :markdown
+        Browse to [http://localhost:4567](http://localhost:4567)
+
+        And you should see hello world.
+
+        #### Awesome!
+
+        Now you have a small sinatra application, lets push it
+        to wilbur.io.
+
+      pre.prettyprint.lang-sh
+        |  
+        |  vmc push [xxx]-hw
+        |  Would you like to deploy from the current directory? [Yn]: Y
+        |  Application Deployed URL: 'xxx-hw.wilbur.io'? Y
+        |  Detected a Sinatra Application, is this correct? [Yn]: Y
+        |  Memory Reservation [Default:128M] (64M, 128M, 256M or 512M) 64M
+        |  Would you like to bind any services to 'tnw-hw'? [yN]: N
+        |  
+        |  Uploading Application:
+        |    Checking for available resources: OK
+        |    Packing application: OK
+        |    Uploading (0K): OK   
+        |  Push Status: OK
+        |  Staging Application: OK
+        |  Starting Application: OK
+        |  
+        |  open http://xxx-hw.wilbur.io
+
+      :markdown
+        ### Congrats!  You should have just deployed your first app to Wilbur.IO

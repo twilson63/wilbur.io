@@ -1,0 +1,60 @@
+:coffeescript
+  $ -> $("#nav li.about").addClass('active')
+
+include shared/topbar
+
+.container
+  .row
+    .four.columns
+      include shared/index
+    .eight.columns
+      .row
+        .panel
+          h2 About Wilbur.io
+          .sub-heading.
+            Wilbur.io was started because a lot of the cloud 
+            application platforms are moving to provide multiple
+            web framework support on their own grid platform.
+      
+      .row
+        .six.columns
+          :markdown
+            ### We need a platform focused on our tech!
+            
+            At Jack Russell Software, we felt this rapid change
+            to adopt and support so many different kinds of frameworks
+            takes away from the focus on being really awesome at a few.
+            
+            ### Stability 
+            
+            We want a stable consistent platform that will only focus on the
+            technologies that we use and provide a home that enables them to
+            be robust and scalable.
+            
+
+        .six.columns
+          :markdown
+            ### PAAS are all great, but not focused
+
+            All web frameworks are great and need platforms that enable
+            them to thrive.  Rails, Sinatra and NodeJs are platforms that have 
+            different requirements than other web frameworks, and we really 
+            know how these frameworks operate.  
+            
+            So we wanted a solution that
+            would allow us to deploy our apps in an environment that is isolated
+            and consistent.  Working with other providers and seeing them change
+            was not a positive feeling.
+
+      .row
+        .twelve.columns
+          :markdown
+            ### Open
+
+            We are leveraging the CloudFoundry opensource platform as a service
+            system to manage wilbur.io.  This platform is written entirely in 
+            ruby and is easy to understand, contribute and maintain.  We are 
+            looking forward to continuing to add features and to continue to 
+            contribute back to the community fo CloudFoundry.
+
+

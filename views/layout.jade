@@ -1,0 +1,46 @@
+!!! 5
+//if lt IE 7 ]><html class="ie ie6" lang="en">
+//if IE 7 ]><html class="ie ie7" lang="en">
+//if IE 8 ]><html class="ie ie8" lang="en">
+// [if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]
+head
+  meta(charset='utf-8')
+  title= title
+  meta(name='description', content='')
+  meta(name='author', content='')
+  // Mobile Specific
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+  // CSS
+  link(rel="stylesheet", href="/stylesheets/globals.css")
+  link(rel="stylesheet", href="/stylesheets/typography.css")
+  link(rel="stylesheet", href="/stylesheets/grid.css")
+  link(rel="stylesheet", href="/stylesheets/ui.css")
+  link(rel="stylesheet", href="/stylesheets/forms.css")
+  link(rel="stylesheet", href="/stylesheets/oribit.css")
+  link(rel="stylesheet", href="/stylesheets/reveal.css")
+  link(rel="stylesheet", href="/stylesheets/app.css")
+  link(rel="stylesheet", href="/stylesheets/mobile.css")
+  link(rel="stylesheet", href="/stylesheets/prettify.css")
+  
+
+  //- link(rel="stylesheet", href="/static/css/0/application.css")
+  link(rel="stylesheet", href="/presentation.css")
+
+  // Favicons
+  link(rel='shortcut icon', href='/images/favicon.ico')
+  link(rel='apple-touch-icon', href='/images/apple-touch-icon.png')
+  link(rel='apple-touch-icon', sizes='72x72', href='/images/apple-touch-icon-72x72.png')
+  link(rel='apple-touch-icon', sizes='114x114', href='/images/apple-touch-icon-114x114.png')
+
+  //if lt IE 9
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+body
+  //script(type='text/javascript', src='/application.js')
+  script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.4/jquery.min.js')
+  script(type='text/javascript', src='/static/js/1/foundation.js')
+
+  != body
+  
+| </html>
