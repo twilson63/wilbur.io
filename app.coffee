@@ -73,9 +73,14 @@ app.get "/", (req, res) ->
   res.render "welcome",
     title: "welcome - Wilbur.io"
 
+app.get "/posts/:page", (req, res) ->
+  res.render "posts/#{req.params.page}",
+    title: "#{req.params.page} - Wilbur.io"
+
 app.get "/:page", (req, res) ->
   res.render req.params.page,
     title: "#{req.params.page} - Wilbur.io"
+
 
 app.listen process.env.VMC_APP_PORT or process.env.C9_PORT or 3000
 console.log "Express server listening on port %d in %s mode", app.address().port, app.settings.env

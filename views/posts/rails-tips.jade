@@ -1,0 +1,40 @@
+include ../shared/topbar
+.container
+  .row
+    .four.columns
+      include ../shared/index
+    .eight.columns
+      .panel
+        h2 Rails Tips
+        .subheader.
+          Tips to deploying Rails Applications
+
+      .row
+        .offset-by-one.eight.columns
+          :markdown
+            Deploying Rails applications can be a little frustrating,
+            but they are really quite simple.
+
+            1. Make sure you are using bundler
+            2. Make sure you do a bundle package
+
+          pre.prettyprint.lang-sh
+            |  bundle package
+
+          :markdown
+            3. setup your env vars before you start your app.
+
+          pre.prettyprint.lang-sh
+            |  vmc push my-rails-app --no-start
+            |  vmc env-add STUFF=foobar
+            |  vmc start my-rails-app
+
+          :markdown
+            4. Always check the logs...
+
+          pre.prettypring.lang-sh
+            |  vmc files my-rails-app logs/staging.log
+            |  vmc files my-rails-app logs/migration.log
+            |  vmc files my-rails-app logs/stderr.log
+            |  vmc files my-rails-app logs/stdout.log
+
