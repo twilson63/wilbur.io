@@ -1,0 +1,29 @@
+include ../shared/topbar
+.container
+  .row
+    .four.columns
+      include ../shared/index
+    .eight.columns
+      .panel
+        h2 Scaling
+        .subheader.
+          Scaling up and down applications
+
+      .row
+        .offset-by-one.eight.columns
+          :markdown
+            Well now you have launched your awesome app
+            and you want to turn the volume up and turn
+            the volume down, as needed.
+            
+            Its simple.
+
+          .pre.prettyprint.lang-sh
+            |  vmc instances my-app 2
+            |  # runs 2 instances of my-app
+            |  
+            |  vmc instances my-app 1
+            |  # runs 1 instance of my-app
+            |  
+            |  vmc instances my-app
+            |  # provides details of your apps instances
