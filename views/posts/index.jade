@@ -1,0 +1,17 @@
+include ../shared/topbar
+.container
+  .row
+    .four.columns
+      include ../shared/index
+    .eight.columns
+      .panel
+        h2 Posts
+        .subheader.
+          Small little articles that will help you get up and running.
+
+      .row
+        .offset-by-one.eight.columns
+          ul
+            li: a(href='/posts/rails-tips') Rails Tips
+            li: a(href='/posts/scaling') Scaling Apps
+          
